@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFG | Consultora Estratégica para PYMES en Chile</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="¿Cansado del caos en tu PYME? Construimos el sistema para automatizar tus ventas, optimizar tu rentabilidad y darte el control. Descubre cómo en Chile.">
+    <meta name="keywords" content="consultora para pymes, estrategia de negocios, aumentar ventas, automatización de marketing, pymes chile, consultoría estratégica">
+    <meta name="author" content="MFG Consultora Estratégica Integral">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles & Configuration for Tailwind -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117; /* Un negro ligeramente azulado, muy de SaaS */
+            color: #E6EDF3;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-button {
+            background-image: linear-gradient(to right, #38bdf8 0%, #818cf8 50%, #38bdf8 100%);
+            background-size: 200% auto;
+            transition: all 0.4s ease-out;
+        }
+        .gradient-button:hover {
+            background-position: right center;
+        }
+        .glass-card {
+            background: rgba(22, 27, 34, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(48, 54, 61, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(56, 189, 248, 0.1), 0 10px 10px -5px rgba(56, 189, 248, 0.04);
+        }
+        .section-glow {
+            position: absolute;
+            z-index: -1;
+            width: 50vw;
+            height: 50vh;
+            background: rgba(56, 189, 248, 0.1);
+            filter: blur(100px);
+            border-radius: 50%;
+        }
+        .logo-hover {
+            transition: color 0.3s ease;
+        }
+        .logo-hover:hover {
+            color: #38bdf8;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1rem 0.5rem;
+            text-align: center;
+        }
+        .comparison-table thead th {
+            font-size: 1.125rem;
+        }
+        .comparison-table tbody th {
+            text-align: left;
+            font-weight: 600;
+            padding-left: 1rem;
+        }
+        .comparison-table .feature-category {
+            background-color: rgba(30, 41, 59, 0.5);
+            font-weight: 800;
+            color: #38bdf8;
+        }
+        .comparison-table .highlight {
+            background: rgba(56, 189, 248, 0.05);
+        }
+        .comparison-table .check {
+            color: #34d399;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .faq-item .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 500px; /* Adjust as needed */
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="header" class="bg-gray-900/50 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white logo-hover">MFG</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-300 hover:text-sky-400 transition">Servicios</a>
+                <a href="#results" class="text-gray-300 hover:text-sky-400 transition">Resultados</a>
+                <a href="#plans" class="text-gray-300 hover:text-sky-400 transition">Planes</a>
+                <a href="#audit" class="text-gray-300 hover:text-sky-400 transition">Diagnóstico Gratis</a>
+                <a href="#faq" class="text-gray-300 hover:text-sky-400 transition">FAQ</a>
+                <a href="#contact" class="text-gray-300 hover:text-sky-400 transition">Contacto</a>
+            </nav>
+            <a href="#contact" class="hidden md:block px-5 py-2.5 text-sm font-semibold text-white rounded-lg gradient-button">
+                Agendar Sesión
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 text-gray-300 hover:text-sky-400">Servicios</a>
+            <a href="#results" class="block py-2 text-gray-300 hover:text-sky-400">Resultados</a>
+            <a href="#plans" class="block py-2 text-gray-300 hover:text-sky-400">Planes</a>
+            <a href="#audit" class="block py-2 text-gray-300 hover:text-sky-400">Diagnóstico Gratis</a>
+            <a href="#faq" class="block py-2 text-gray-300 hover:text-sky-400">FAQ</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-sky-400">Contacto</a>
+            <a href="#contact" class="block mt-4 w-full text-center px-5 py-2.5 text-sm font-semibold text-white rounded-lg gradient-button">
+                Agendar Sesión
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center pt-24 pb-12">
+            <div class="section-glow top-0 left-0"></div>
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+                    Menos caos, más control. <br class="hidden md:block"> El sistema que transforma tu PYME en un negocio <span class="gradient-text">predecible y rentable.</span>
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-400">
+                    Deja de gestionar una empresa que depende 100% de tu tiempo y esfuerzo. Nuestro equipo implementa la estrategia, tecnología y automatización para que tu negocio trabaje para ti, no al revés.
+                </p>
+                <div class="mt-10">
+                    <a href="#contact" class="inline-block px-8 py-4 text-lg font-bold text-white rounded-lg gradient-button shadow-lg shadow-sky-500/20">
+                        Solicitar Diagnóstico Gratuito
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500">Analizamos tu negocio en 30 minutos y te damos un plan de acción.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pain Points Section -->
+        <section id="pain-points" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Cada día que pasa sin un sistema, estás perdiendo dinero.</h2>
+                    <p class="mt-4 text-lg text-gray-400">¿Te suena familiar?</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1: Icono de dinero con alas -->
+                    <div class="glass-card p-8 rounded-xl text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.75A.75.75 0 013 4.5h.75m0 0h.75A.75.75 0 015.25 6v.75m0 0v-.75A.75.75 0 014.5 6h-.75m-2.25 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75m0 0H3.75m0 0a.75.75 0 01-.75.75H3a.75.75 0 01-.75-.75v-.75m0 0h.75A.75.75 0 013.75 6v.75m0 0v-.75A.75.75 0 013 4.5h.75m0 0h.75a.75.75 0 01.75.75v.75m0 0h-.75a.75.75 0 01-.75-.75V6m-3.75 0H3.75m0 0v.75m0 0a.75.75 0 01-.75.75H3a.75.75 0 01-.75-.75V6m0 0h.75a.75.75 0 01.75.75v.75m0 0v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75m2.25 0A.75.75 0 013.75 6h.75a.75.75 0 01.75.75v.75m0 0h-.75a.75.75 0 01-.75-.75V6" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Inviertes en "visibilidad" que no paga</h3>
+                        <p class="text-gray-400">Tus redes sociales tienen likes, pero tu cuenta bancaria no lo nota. El marketing se siente como un gasto, no una inversión.</p>
+                    </div>
+                    <!-- Card 2: Icono de candado/esclavo -->
+                    <div class="glass-card p-8 rounded-xl text-center">
+                        <div class="flex justify-center mb-4">
+                           <svg class="w-12 h-12 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 00-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Eres esclavo de tu negocio</h3>
+                        <p class="text-gray-400">Si te tomas un día libre, las ventas caen. Respondes mensajes a toda hora y la operación se detiene si no estás "apagando incendios".</p>
+                    </div>
+                    <!-- Card 3: Icono de brújula/a ciegas -->
+                    <div class="glass-card p-8 rounded-xl text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Tomas decisiones a ciegas</h3>
+                        <p class="text-gray-400">No sabes qué producto es más rentable o si subir los precios te dejará sin ventas. Vives en la incertidumbre.</p>
+                    </div>
+                    <!-- Card 4: Icono de enredo/nudo -->
+                    <div class="glass-card p-8 rounded-xl text-center">
+                        <div class="flex justify-center mb-4">
+                           <svg class="w-12 h-12 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25v2.25A2.25 2.25 0 006 20.25z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Tus herramientas son un enredo</h3>
+                        <p class="text-gray-400">Usas un Excel para clientes, WhatsApp para vender y un cuaderno para finanzas. Nada está conectado y la información clave se pierde.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us / Who We Are Section -->
+        <section id="about" class="py-20 bg-gray-900/40 relative">
+            <div class="section-glow top-1/4 right-0"></div>
+            <div class="container mx-auto px-6 text-center max-w-4xl z-10">
+                <h2 class="text-3xl md:text-4xl font-bold">Creamos MFG porque estábamos hartos de ver a PYMES talentosas fracasar por falta de estrategia.</h2>
+                <div class="mt-8 space-y-6 text-lg text-gray-400 text-left md:text-center">
+                    <p>Conocemos tu historia. La del emprendedor que lo da todo, que sacrifica noches y fines de semana, pero que sigue atrapado en el mismo nivel de facturación. Vimos cómo el mercado se llenaba de "expertos" y agencias que vendían humo: soluciones genéricas, métricas de vanidad y una total desconexión con la realidad financiera de un negocio.</p>
+                    <p class="font-semibold text-gray-200">Decidimos ser la antítesis. En MFG no hablamos de "engagement", hablamos de <span class="gradient-text font-bold">EBITDA</span>. No te vendemos "branding", te construimos <span class="gradient-text font-bold">sistemas de adquisición de clientes</span>. Nuestro trabajo no es hacer que tu Instagram se vea bonito; es hacer que tu negocio sea más rentable, escalable y, finalmente, menos dependiente de ti. Somos un equipo de consultores e implementadores, el socio estratégico que se ensucia las manos contigo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Nuestras áreas de especialización.</h2>
+                    <p class="mt-4 text-lg text-gray-400">No son servicios aislados. Son los pilares interconectados que nuestro equipo de especialistas utiliza para construir una empresa sólida y en crecimiento.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-3">Marketing que Genera Ventas</h3>
+                        <p class="text-gray-400"><span class="font-semibold text-sky-400">La Transformación:</span> Pasamos de campañas que queman dinero a sistemas de publicidad que atraen un flujo constante y predecible de clientes listos para comprar. Cada peso invertido tiene un retorno medible.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-3">Automatización: Tu Empresa en Piloto Automático</h3>
+                        <p class="text-gray-400"><span class="font-semibold text-sky-400">La Transformación:</span> Liberamos tu tiempo de tareas repetitivas y evitamos que pierdas ventas por demoras. Tu negocio responderá, agendará y dará seguimiento 24/7, como si tuvieras un equipo de 10 personas.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-3">Inteligencia de Negocios: El Mapa del Tesoro</h3>
+                        <p class="text-gray-400"><span class="font-semibold text-sky-400">La Transformación:</span> Convertimos tu caos de datos en un panel de control simple que te muestra la ruta hacia la máxima rentabilidad. Sabrás exactamente qué funciona, qué no y dónde están tus mayores oportunidades.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-3">Estrategia Comercial: La Máquina de Facturar</h3>
+                        <p class="text-gray-400"><span class="font-semibold text-sky-400">La Transformación:</span> Rediseñamos tu oferta y tus precios para que dejes de competir por ser el más barato y te conviertas en la opción más deseada. Aumentarás tus márgenes sin perder clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results Section -->
+        <section id="results" class="py-20 bg-gray-900/40 relative">
+             <div class="section-glow bottom-0 left-1/4"></div>
+            <div class="container mx-auto px-6 z-10">
+                <div class="text-center mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold">No te contamos lo que podríamos hacer. Te mostramos los resultados que generamos.</h2>
+                    <p class="mt-4 text-lg text-gray-400">Nuestra metodología está diseñada para producir transformaciones de negocio medibles. Estos son algunos de los resultados que nuestro equipo ha generado para clientes que decidieron dejar el caos atrás.</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <p><span class="font-bold text-white">Multiplicación de la facturación hasta en 8x</span> en periodos de 12 meses.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <p><span class="font-bold text-white">Agendas completas</span> con hasta 2 meses de anticipación, eliminando la incertidumbre.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <p><span class="font-bold text-white">Crecimiento de comunidades en redes sociales hasta en 10x,</span> atrayendo seguidores que se convierten en clientes.</p>
+                        </div>
+                         <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <p><span class="font-bold text-white">Flujo constante y predecible de mensajes diarios</span> de nuevos clientes potenciales.</p>
+                        </div>
+                    </div>
+                     <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <p><span class="font-bold text-white">Aumento de precios de hasta un 20%,</span> mejorando los márgenes y aumentando la percepción de valor.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <p><span class="font-bold text-white">Optimización de utilidades</span> a través de una planificación financiera y tributaria inteligente.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <p><span class="font-bold text-white">Implementación de dashboards e informes</span> para tomar decisiones basadas en KPIs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 max-w-3xl mx-auto glass-card p-8 rounded-xl">
+                    <p class="text-xl italic text-gray-300">"MFG no me vendió marketing, me devolvió el control de mi negocio y de mi vida. Pasé de estar estresada por no saber si llegaría a fin de mes, a planificar mi crecimiento con meses de antelación. Hoy mi negocio factura lo que nunca imaginé y yo trabajo menos que antes."</p>
+                    <p class="mt-4 font-semibold text-sky-400 text-right">- Cliente Satisfecho, Sector Belleza</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="plans" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold">Esto no es un gasto, es la inversión más rentable que harás en tu negocio.</h2>
+                    <p class="mt-4 text-lg text-gray-400">Cada plan está diseñado para generar un retorno que multiplica su valor. Compara y elige el nivel de aceleración que tu empresa necesita hoy.</p>
+                </div>
+                
+                <!-- Comparison Table -->
+                <div class="w-full overflow-x-auto">
+                    <table class="comparison-table w-full min-w-[1000px] glass-card rounded-xl">
+                        <thead>
+                            <tr class="border-b border-gray-700">
+                                <th class="w-1/4"></th>
+                                <th class="w-1/5">
+                                    <p>Base</p>
+                                    <p class="text-2xl font-bold">$350.000</p>
+                                </th>
+                                <th class="w-1/5 highlight">
+                                    <p class="text-sky-400">Estándar</p>
+                                    <p class="text-2xl font-bold">$550.000</p>
+                                </th>
+                                <th class="w-1/5">
+                                    <p>Avanzado</p>
+                                    <p class="text-2xl font-bold">$950.000</p>
+                                </th>
+                                <th class="w-1/5">
+                                    <p>Full</p>
+                                    <p class="text-2xl font-bold">$1.5M</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Estrategia y Acompañamiento -->
+                            <tr><td colspan="5" class="feature-category">Estrategia y Acompañamiento</td></tr>
+                            <tr class="border-b border-gray-800">
+                                <th>Reunión Estratégica</th>
+                                <td>1 / mes</td>
+                                <td class="highlight">1 / mes</td>
+                                <td>2 / mes</td>
+                                <td>Semanal</td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <th>Auditoría de Presencia Digital</th>
+                                <td class="check">✓</td>
+                                <td class="highlight check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Análisis de Precios y Servicios</th>
+                                <td>Básico</td>
+                                <td class="highlight">Básico</td>
+                                <td>Revisión Profunda</td>
+                                <td>Optimización Continua</td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <th>Soporte por WhatsApp</th>
+                                <td class="check">✓</td>
+                                <td class="highlight check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <!-- Marketing y Publicidad -->
+                            <tr><td colspan="5" class="feature-category">Marketing y Publicidad</td></tr>
+                            <tr class="border-b border-gray-800">
+                                <th>Campañas Meta Ads</th>
+                                <td>1</td>
+                                <td class="highlight">2 en paralelo</td>
+                                <td>2 en paralelo</td>
+                                <td>Múltiples</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Publicaciones en RRSS</th>
+                                <td>Hasta 2 / sem</td>
+                                <td class="highlight">Hasta 3 / sem</td>
+                                <td>Hasta 4 / sem</td>
+                                <td>Hasta 5 / sem</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Creación de Landing Page</th>
+                                <td class="check">✓</td>
+                                <td class="highlight check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <th>Estrategia Orgánica + Pagada</th>
+                                <td>-</td>
+                                <td class="highlight">-</td>
+                                <td>-</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <!-- Automatización y Sistemas -->
+                            <tr><td colspan="5" class="feature-category">Automatización y Sistemas</td></tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Sistema de Agenda Automatizada</th>
+                                <td>-</td>
+                                <td class="highlight check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Automatización de Atención</th>
+                                <td>-</td>
+                                <td class="highlight">Parcial</td>
+                                <td>Completa (IA)</td>
+                                <td>Completa (IA)</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Base de Datos de Clientes</th>
+                                <td>-</td>
+                                <td class="highlight check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Funnel Completo + CRM Básico</th>
+                                <td>-</td>
+                                <td class="highlight">-</td>
+                                <td>-</td>
+                                <td class="check">✓</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Automatización de Remarketing</th>
+                                <td>-</td>
+                                <td class="highlight">-</td>
+                                <td>-</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <!-- Análisis y Datos -->
+                            <tr><td colspan="5" class="feature-category">Análisis y Datos</td></tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Reporte Mensual de Resultados</th>
+                                <td>Básico</td>
+                                <td class="highlight">Profundo</td>
+                                <td>Dashboard</td>
+                                <td>Dashboard</td>
+                            </tr>
+                             <tr class="border-b border-gray-800">
+                                <th>Dashboards en Looker Studio</th>
+                                <td>-</td>
+                                <td class="highlight">-</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <th>Segmentación por Cliente</th>
+                                <td>-</td>
+                                <td class="highlight">-</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <!-- Botones -->
+                            <tr>
+                                <th></th>
+                                <td><a href="#contact" class="mt-4 inline-block w-full text-center px-4 py-3 font-semibold text-white rounded-lg border-2 border-sky-500 hover:bg-sky-500 transition">Elegir Base</a></td>
+                                <td class="highlight"><a href="#contact" class="mt-4 inline-block w-full text-center px-4 py-3 font-semibold text-white rounded-lg gradient-button">Elegir Estándar</a></td>
+                                <td><a href="#contact" class="mt-4 inline-block w-full text-center px-4 py-3 font-semibold text-white rounded-lg border-2 border-sky-500 hover:bg-sky-500 transition">Elegir Avanzado</a></td>
+                                <td><a href="#contact" class="mt-4 inline-block w-full text-center px-4 py-3 font-semibold text-white rounded-lg border-2 border-sky-500 hover:bg-sky-500 transition">Elegir Full</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Prime Plans Section -->
+                <div id="prime-plans" class="mt-24">
+                    <div class="text-center mb-12 max-w-3xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold">Planes Prime: Tu Socio Estratégico</h2>
+                        <p class="mt-4 text-lg text-gray-400">Para empresas que buscan un crecimiento exponencial y un partner a nivel C-Level.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Prime Business -->
+                        <div class="glass-card p-8 rounded-xl text-center flex flex-col">
+                            <h3 class="text-2xl font-bold">Prime Business</h3>
+                            <p class="text-lg text-gray-400 mt-2">Desde $2.5M</p>
+                            <p class="mt-4 flex-grow">Dirección estratégica externalizada y equipo dedicado para escalamiento acelerado.</p>
+                        </div>
+                        <!-- Prime Corporate -->
+                        <div class="glass-card p-8 rounded-xl text-center flex flex-col">
+                            <h3 class="text-2xl font-bold">Prime Corporate</h3>
+                            <p class="text-lg text-gray-400 mt-2">Desde $4M</p>
+                            <p class="mt-4 flex-grow">Business Intelligence, Data Science y expansión para empresas consolidadas.</p>
+                        </div>
+                        <!-- Prime Enterprise -->
+                        <div class="glass-card p-8 rounded-xl text-center flex flex-col">
+                            <h3 class="text-2xl font-bold">Prime Enterprise</h3>
+                            <p class="text-lg text-gray-400 mt-2">Desde $7M</p>
+                            <p class="mt-4 flex-grow">Consultoría C-Level, transformación digital y apertura de nuevos mercados.</p>
+                        </div>
+                        <!-- Solución a Medida -->
+                        <div class="glass-card p-8 rounded-xl text-center flex flex-col">
+                            <h3 class="text-2xl font-bold">Solución a Medida</h3>
+                            <p class="text-lg text-gray-400 mt-2">Personalizable</p>
+                            <p class="mt-4 flex-grow">Construimos una solución única para desafíos y objetivos extraordinarios.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <a href="#contact" class="inline-block px-8 py-4 text-lg font-bold text-white rounded-lg gradient-button shadow-lg shadow-sky-500/20">
+                            Solicitar Propuesta Prime
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Audit Section -->
+        <section id="audit" class="py-20 bg-gray-900/40 relative">
+            <div class="section-glow top-0 right-0"></div>
+            <div class="container mx-auto px-6 z-10">
+                <div class="text-center mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold">Tu Primer Paso Hacia el Control: Nuestro Diagnóstico 360° Gratuito</h2>
+                    <p class="mt-4 text-lg text-gray-400">No es una llamada de ventas. Es una sesión de trabajo real donde desglosamos tu negocio para encontrar oportunidades ocultas de crecimiento.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">¿Qué analizamos?</h3>
+                        <div class="space-y-4">
+                            <div class="glass-card p-4 rounded-lg">
+                                <h4 class="font-semibold text-sky-400">Análisis Comercial y de Rentabilidad</h4>
+                                <p class="text-sm text-gray-400">Revisamos tus precios, márgenes y la rentabilidad de tus clientes para encontrar dónde está el dinero.</p>
+                            </div>
+                             <div class="glass-card p-4 rounded-lg">
+                                <h4 class="font-semibold text-sky-400">Auditoría de Procesos y Automatización</h4>
+                                <p class="text-sm text-gray-400">Identificamos cuellos de botella y tareas manuales que te roban tiempo y te hacen perder ventas.</p>
+                            </div>
+                             <div class="glass-card p-4 rounded-lg">
+                                <h4 class="font-semibold text-sky-400">Evaluación del Embudo Digital</h4>
+                                <p class="text-sm text-gray-400">Analizamos por qué tus seguidores no se convierten en clientes y dónde se están fugando las oportunidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-2xl font-bold mb-4">¿Qué te llevarás?</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start"><svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><span class="font-semibold text-white">Un Mapa de Oportunidades:</span> Una hoja de ruta clara con el potencial de crecimiento de tu negocio.</span></li>
+                            <li class="flex items-start"><svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><span class="font-semibold text-white">Identificación de "Fugas de Dinero":</span> Te mostraremos exactamente dónde estás perdiendo rentabilidad.</span></li>
+                            <li class="flex items-start"><svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><span class="font-semibold text-white">3 Acciones Inmediatas</span> que puedes implementar hoy mismo para ver mejoras.</span></li>
+                             <li class="flex items-start"><svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><span class="font-semibold text-white">Una Proyección de Potencial ROI</span> al trabajar con nosotros.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20">
+            <div class="container mx-auto px-6 z-10">
+                <div class="text-center mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold">Preguntas Frecuentes</h2>
+                    <p class="mt-4 text-lg text-gray-400">Resolvemos tus dudas más comunes para que tomes la mejor decisión.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item glass-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">¿Tengo que firmar un contrato de permanencia?</span>
+                            <svg class="faq-icon w-6 h-6 text-sky-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-6 pt-0 text-gray-400">No. Creemos en la flexibilidad y en que nuestros resultados deben ser la única razón para que te quedes con nosotros. Puedes dar de baja el servicio con 30 días de anticipación. Nuestra meta es construir una relación a largo plazo basada en la confianza y el crecimiento mutuo.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item glass-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">¿En cuánto tiempo veré resultados?</span>
+                            <svg class="faq-icon w-6 h-6 text-sky-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-6 pt-0 text-gray-400">Aunque cada negocio es diferente, nuestros clientes suelen ver los primeros resultados tangibles (más mensajes, más prospectos, mejor organización) en los primeros 30-45 días. Los resultados exponenciales, como la duplicación de facturación, son parte de un proceso estratégico que madura entre los 6 y 12 meses.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item glass-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">¿Quién se encarga de crear el contenido (fotos, videos)?</span>
+                            <svg class="faq-icon w-6 h-6 text-sky-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-6 pt-0 text-gray-400">Nosotros nos encargamos de la estrategia, el copywriting (textos persuasivos) y el diseño gráfico profesional. El material base (fotos y videos de tu producto/servicio) lo provees tú, ya que nadie conoce tu negocio como tú. Sin embargo, te entregamos una guía clara y pautas sencillas para que el material que generes sea de alta calidad y efectivo.</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="faq-item glass-card rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">¿La inversión en publicidad (pauta) está incluida en el precio del plan?</span>
+                            <svg class="faq-icon w-6 h-6 text-sky-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-6 pt-0 text-gray-400">No. La inversión en publicidad es el dinero que se paga directamente a las plataformas como Meta (Facebook/Instagram) o Google para que tus anuncios se muestren. Este monto es aparte de nuestros honorarios. Nosotros actuamos como los estrategas que administran ese presupuesto para maximizar su rendimiento y obtener el mayor retorno posible para tu negocio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900/40 relative">
+            <div class="section-glow bottom-0 right-0"></div>
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold">Hablemos de tu negocio.</h2>
+                    <p class="mt-6 text-lg md:text-xl text-gray-400">
+                        El primer paso para ordenar tu empresa y empezar a escalar es una simple conversación. Elige cómo prefieres contactarnos.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Contact Form -->
+                    <div class="glass-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6">Envíanos un mensaje</h3>
+                        <form action="#" method="POST">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-300">Nombre</label>
+                                    <input type="text" name="name" id="name" required class="mt-1 block w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                                    <input type="email" name="email" id="email" required class="mt-1 block w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-300">Teléfono (WhatsApp)</label>
+                                    <input type="tel" name="phone" id="phone" class="mt-1 block w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-300">¿Cuál es tu mayor desafío hoy?</label>
+                                    <textarea name="message" id="message" rows="4" required class="mt-1 block w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full px-6 py-3 font-semibold text-white rounded-lg gradient-button">
+                                        Enviar y Solicitar Contacto
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- WhatsApp Contact -->
+                    <div class="lg:pt-8">
+                        <h3 class="text-2xl font-bold mb-4">O la forma más rápida...</h3>
+                        <p class="text-gray-400 mb-6">Haz clic en el botón y cuéntanos sobre tu negocio por WhatsApp. Te responderemos en horario hábil para coordinar tu sesión estratégica gratuita.</p>
+                        <a href="https://wa.me/56900000000?text=Hola,%20vengo%20del%20sitio%20web%20y%20me%20gustaría%20agendar%20una%20sesión%20estratégica." target="_blank" class="inline-flex items-center px-8 py-4 text-lg font-bold text-white rounded-lg gradient-button shadow-lg shadow-sky-500/20">
+                            <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.8 0-65.7-10.8-94.2-30.6l-6.7-4-69.8 18.3L72 359.2l-4.5-7c-18.9-29.4-28.8-63.3-28.8-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.8-16.4-53.9-29.1-65.5-49.5-14.2-26.1-2.9-39.5 1.8-51.7 4.5-11.9 10.5-20.9 15.7-27l5.2-6.1c2-2.3 3.2-5.1 4.7-7.9 1.5-2.8 0.8-5.6-0.4-8.4s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                            Chatear por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/40 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- Reemplaza '#' con tus URLs reales -->
+                <a href="#" target="_blank" class="text-gray-400 hover:text-sky-400 transition" aria-label="Facebook">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .79 0 1.77v20.46C0 23.21.79 24 1.77 24h11.64V14.74h-3.13V11.2h3.13V8.59c0-3.1 1.89-4.79 4.66-4.79 1.33 0 2.47.1 2.8.15v3.1h-1.83c-1.5 0-1.8.72-1.8 1.77v2.32h3.44l-.45 3.54h-2.99V24h6.19c.98 0 1.77-.79 1.77-1.77V1.77C24 .79 23.21 0 22.23 0z"/></svg>
+                </a>
+                <a href="#" target="_blank" class="text-gray-400 hover:text-sky-400 transition" aria-label="Instagram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.415 2.175 8.796 2.163 12 2.163m0-2.163C8.74 0 8.333.012 7.053.072 2.695.272.273 2.69.073 7.052.012 8.333 0 8.74 0 12s.012 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.988 8.74 24 12 24s3.667-.012 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98C23.988 15.667 24 15.26 24 12s-.012-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.012 15.26 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+                </a>
+                <a href="#" target="_blank" class="text-gray-400 hover:text-sky-400 transition" aria-label="LinkedIn">
+                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.47 0H3.53C1.58 0 0 1.58 0 3.53v16.94C0 22.42 1.58 24 3.53 24h16.94c1.95 0 3.53-1.58 3.53-3.53V3.53C24 1.58 22.42 0 20.47 0zM7.06 20.47H3.53V8.99h3.53v11.48zM5.3 7.42c-1.15 0-2.08-.94-2.08-2.08s.93-2.08 2.08-2.08 2.08.94 2.08 2.08-.93 2.08-2.08 2.08zm15.45 13.05h-3.53v-5.6c0-1.34-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7h-3.53V8.99h3.39v1.56h.05c.47-.89 1.62-1.82 3.34-1.82 3.57 0 4.23 2.35 4.23 5.4v6.24z"/></svg>
+                </a>
+            </div>
+            <p>&copy; 2025 MFG Consultora Estratégica Integral. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Transformando PYMES en Chile.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                 mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Header background change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-gray-900/80');
+                header.classList.remove('bg-gray-900/50');
+            } else {
+                header.classList.remove('bg-gray-900/80');
+                header.classList.add('bg-gray-900/50');
+            }
+        });
+
+        // Simple Fade-in on Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+        
+        // Add fade-in styles to head
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .fade-in {
+                opacity: 0;
+                transform: translateY(30px); /* Aumentado para un efecto más notable */
+                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            }
+            .fade-in-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other open items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('open')) {
+                        otherItem.classList.remove('open');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('open');
+            });
+        });
+
+    </script>
+
+</body>
+</html>
